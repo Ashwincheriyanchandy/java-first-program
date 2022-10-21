@@ -27,7 +27,7 @@ public class SavingsCalculator {
     }
 
     private static int remainingDaysInMonth(LocalDate date){
-        YearMonth yearmonth = YearMonth.of(date.getYear(), date.getMonth());
+        YearMonth yearMonth = YearMonth.of(date.getYear(), date.getMonth());
         int totalDaysInMonth = yearMonth.lengthOfMonth();
         int remainingDays = totalDaysInMonth - date.getDayOfMonth();
         return remainingDays;
@@ -38,8 +38,8 @@ public class SavingsCalculator {
     }
 
     public static void main(String[] args){
-        final String[] creditsAsString = args[0].split(regex:",");
-        final String[] debitsAsString = args[1].split(regex: ",");
+        final String[] creditsAsString = args[0].split(",");
+        final String[] debitsAsString = args[1].split(",");
         final float[] credits = new float[creditsAsString.length] ;
         final float[] debits = new float[debitsAsString.length] ;
 
